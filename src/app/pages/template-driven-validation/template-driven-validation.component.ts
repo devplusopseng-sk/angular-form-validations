@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RegistrationDtls } from 'src/app/model/RegistrationDtls';
 
 @Component({
   selector: 'app-template-driven-validation',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TemplateDrivenValidationComponent implements OnInit {
 
+  regDtls: RegistrationDtls = new RegistrationDtls();
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onSubmit() {
+    console.log(this.regDtls);
   }
 
 }
